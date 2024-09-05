@@ -1,0 +1,26 @@
+---
+const {menuElements} = Astro.props
+console.log(menuElements)
+---
+
+<div class="flex mx-0 p-4 mt-4">
+    <!-- Navegación lateral izquierda -->
+    <aside class="w-1/4 p-4 rounded-lg shadow-sm shadow-[#12243a]">
+      <nav>
+        <ul class="space-y-4">
+            {
+                menuElements.map((element: string) => (
+                <li><a href={element} class="text-secondary hover:text-primary">{element}</a></li>
+
+                ))
+            }
+          <!-- Más enlaces según tus necesidades -->
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal a la derecha -->
+    <main class="w-3/4 p-6 ml-4 rounded-lg shadow-md">
+      <slot />
+    </main>
+  </div>

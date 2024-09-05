@@ -1,0 +1,16 @@
+---
+// Este componente mostrará el color, el código HEX y el nombre.
+const { colorName, hexCode, textColor } = Astro.props;
+---
+<div class=`bg-[${hexCode}] shadow-md shadow-black rounded-lg overflow-hidden`>
+  <!-- Color de la card -->
+    <div class="h-32" style={`background-color: ${hexCode};`}>
+
+        
+        <!-- Información del color -->
+        <div class=`p-4 text-center align-bottom text-[${textColor}]`>
+            <p class="text-xl font-bold text-secondary">{colorName}</p>
+            <p class="text-secondary">{hexCode}</p>
+        </div>
+    </div>
+</div>

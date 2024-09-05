@@ -1,0 +1,29 @@
+---
+import ColorPaletteComponent from "../components/molecules/ColorPaletteComponent.astro";
+import DocsLayout from "../layouts/DocsLayout.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <DocsLayout
+    menuElements={['blackColors', 'whiteColors', 'colorPalettes', 'gradients']}
+  >
+    <!-- Fila de paletas de colores -->
+    <div class="space-y-6">
+      <ColorPaletteComponent
+        paletteName="Sunset Vibes"
+        colors={[{ hex: "#FF5733" }, { hex: "#FFBD33" }, { hex: "#FFC300" }, { hex: "#DAF7A6" }]}
+      />
+      
+      <ColorPaletteComponent
+        paletteName="Ocean Breeze"
+        colors={[{ hex: "#4A879A" }, { hex: "#57C1EB" }, { hex: "#83DFF7" }, { hex: "#D4F1F4" }]}
+      />
+      
+      <ColorPaletteComponent
+        paletteName="Mountain Mist"
+        colors={[{ hex: "#374E53" }, { hex: "#6D7278" }, { hex: "#A9AEB2" }, { hex: "#D1D8DD" }]}
+      />
+    </div>
+  </DocsLayout>
+</Layout>

@@ -1,0 +1,21 @@
+---
+import GradientCardComponent from "../components/atoms/GradientCardComponent.astro";
+import DocsLayout from "../layouts/DocsLayout.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <DocsLayout
+    menuElements={['blackColors','whiteColors', 'colorPalettes', 'gradients']}
+  >
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <GradientCardComponent color1Name="Cherry Delight" color1Hex="#D02020" color2Hex="#FF896D" />
+      <GradientCardComponent color1Name="Sea Glass" color1Hex="#4A879A" color2Hex="#C5EDF5" />
+      <GradientCardComponent color1Name="Skyline" color1Hex="#3CA8E8" color2Hex="#2931B3" />
+      <GradientCardComponent color1Name="Desert Twilight" color1Hex="#DAE2F8" color2Hex="#D6A4A4" />
+      <GradientCardComponent color1Name="Sunset Glow" color1Hex="#FF7E5F" color2Hex="#FEB47B" />
+      <GradientCardComponent color1Name="Peach" color1Hex="#FF8473" color2Hex="#FFF9D2" />
+
+    </div>
+  </DocsLayout>
+</Layout>

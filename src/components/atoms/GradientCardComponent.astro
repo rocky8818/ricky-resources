@@ -1,0 +1,22 @@
+---
+// Este componente mostrará un gradiente en la parte superior y dos colores con sus códigos y nombres en la parte inferior.
+const { color1Name, color1Hex, color2Hex } = Astro.props;
+---
+<div class="bg-white shadow-md rounded-lg overflow-hidden">
+  <!-- Gradiente -->
+  <div class="h-32" style={`background: linear-gradient(to right, ${color1Hex}, ${color2Hex});`}></div>
+  
+  <p class="text-xl font-bold text-center text-[#101720] mt-4">{color1Name}</p>
+  <!-- Información de los colores -->
+  <div class="p-4 flex justify-between">
+    <!-- Color 1 -->
+    <div class="text-left">
+      <p class=`text-[${color1Hex}]`>{color1Hex}</p>
+    </div>
+
+    <!-- Color 2 -->
+    <div class="text-right">
+      <p class=`text-[${color2Hex}]`>{color2Hex}</p>
+    </div>
+  </div>
+</div>
